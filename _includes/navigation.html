@@ -1,0 +1,21 @@
+<header>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo" style="height: 30px; vertical-align: middle; margin-right: 5px;">
+        <a href="index.html">Simple Blog</a>
+      </div>
+      <nav>
+        <ul>
+	  {% for item in site.data.navigation %} 
+	    <li>
+	      <a href="{{ item.link }}" {% if page.url == item.link %}class="active;"{% endif %}> 
+		{{ item.name }}
+	      </a>
+	     </li>
+	   {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
